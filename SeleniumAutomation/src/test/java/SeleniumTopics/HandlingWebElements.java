@@ -19,6 +19,8 @@ public class HandlingWebElements extends BaseBasic
 		WebElement totalbutton=driver.findElement(By.id("button-two"));
 		System.out.println(totalbutton.getTagName());
 		System.out.println(showMessage.getCssValue("color"));
+		System.out.println(showMessage.isDisplayed());
+		System.out.println(showMessage.isEnabled());
 	}
 		public static void main(String[] args) {
 			// TODO Auto-generated method stub
