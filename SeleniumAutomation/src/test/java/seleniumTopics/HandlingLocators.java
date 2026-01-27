@@ -1,4 +1,4 @@
-package SeleniumTopics;
+package seleniumTopics;
 
 import org.openqa.selenium.By;
 

@@ -1,4 +1,4 @@
-package SeleniumTopics;
+package seleniumTopics;
 
 import java.awt.AWTException;
 import java.awt.Desktop.Action;
@@ -40,8 +40,13 @@ public class HandlingAction extends BaseBasic
 	 robot.keyPress(KeyEvent.VK_T);
 	 robot.keyRelease(KeyEvent.VK_CONTROL);
 	 robot.keyRelease(KeyEvent.VK_T);
-	}
+//	 ctrl+w is for close the tab
+//	 robot.keyPress(KeyEvent.VK_CONTROL);
+//	 robot.keyPress(KeyEvent.VK_W);
+//	 robot.keyRelease(KeyEvent.VK_CONTROL);
+//	 robot.keyRelease(KeyEvent.VK_W);
 	
+	}
 
 	
 	public static void main(String[] args) {
@@ -50,13 +55,15 @@ public class HandlingAction extends BaseBasic
 		actions.intializeBrowser();
 		//actions.verifyRightClick();
 		//actions.verifyMouseHover();
-		actions.verifyDragDrop();
-		//try {
-		//	actions.verifyKeyBoard();
-		//} catch (AWTException e) {
+		//actions.verifyDragDrop();
+		try {
+			actions.verifyKeyBoard();
+		} 
+		catch (AWTException e) 
+		{
 			// TODO Auto-generated catch block
-			//e.printStackTrace();
-		//}
+		e.printStackTrace();
+		}
 	}
 
 }
