@@ -47,10 +47,10 @@ public void fileuploadusingRobot() throws AWTException
 		upload.fileUploadusingSendkeys();
 		//try {
 			//upload.fileuploadusingRobot();
-		}// catch (AWTException e) {
+		//} catch (AWTException e) {
 			// TODO Auto-generated catch block
 			//e.printStackTrace();
 		
 	}
 
-
+	}
