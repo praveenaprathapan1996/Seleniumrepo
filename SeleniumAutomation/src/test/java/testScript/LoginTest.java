@@ -39,7 +39,7 @@ public void verifyUserLoginWithValidUsernameAndInvalidPassword() throws IOExcept
 	
 	String username=ExcelUtility.getStringData(1, 0, "LoginPage");
 	String password=ExcelUtility.getStringData(1, 1, "LoginPage");
-	LoginPage loginpage=new LoginPage(driver) ;           //parmeterised constructor in the LoginPage
+	LoginPage loginpage=new LoginPage(driver) ;           
 	loginpage.enterUsernameOnUserNameField(username);
 	loginpage.enterPasswordOnPasswordField(password);
 	loginpage.clickOnLoginButton();
@@ -58,7 +58,7 @@ public void verifyUserLoginWithInvalidUsernameAndValidPassword() throws IOExcept
 	
 	String username=ExcelUtility.getStringData(2, 0, "LoginPage");
 	String password=ExcelUtility.getStringData(2, 1, "LoginPage");
-	LoginPage loginpage=new LoginPage(driver) ;           //parmeterised constructor in the LoginPage
+	LoginPage loginpage=new LoginPage(driver) ;           
 	loginpage.enterUsernameOnUserNameField(username);
 	loginpage.enterPasswordOnPasswordField(password);
 	loginpage.clickOnLoginButton();
@@ -75,7 +75,7 @@ public void verifyUserLoginWithInvalidUsernameAndInvalidPassword() throws IOExce
 	
 	String username=ExcelUtility.getStringData(3, 0, "LoginPage");
 	String password=ExcelUtility.getStringData(3, 1, "LoginPage");
-	LoginPage loginpage=new LoginPage(driver) ;           //parmeterised constructor in the LoginPage
+	LoginPage loginpage=new LoginPage(driver) ;           
 	loginpage.enterUsernameOnUserNameField(username);
 	loginpage.enterPasswordOnPasswordField(password);
 	loginpage.clickOnLoginButton();
