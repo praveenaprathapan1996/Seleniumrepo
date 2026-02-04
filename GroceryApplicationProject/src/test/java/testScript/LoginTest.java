@@ -11,7 +11,7 @@ import utilities.ExcelUtility;
 
 public class LoginTest extends Base
 {
-	@Test
+	@Test(priority = 4,description = "Validating UserLogin with Valid Cridential")
 	public void verifyUserLoginWithValidUsernameAndValidPassword() throws IOException
 	{
 		String username=ExcelUtility.getStringData(0, 0,"LoginPage" );
@@ -22,7 +22,7 @@ public class LoginTest extends Base
 		loginpage.clickOnsignInButton();
 		
 	}
-	@Test
+	@Test(priority = 3,description = "Validating UserLogin with Valid Cridential")
 	public void verifyUserLoginWithValidUsernameAndInvalidPassword() throws IOException
 	{
 		String username=ExcelUtility.getStringData(1, 0,"LoginPage");
@@ -32,7 +32,7 @@ public class LoginTest extends Base
 		loginpage.enterPasswordOnPasswordField(password);
 		loginpage.clickOnsignInButton();
 	}
-	@Test
+	@Test(priority = 2,description = "Validating UserLogin with Valid Cridential")
 	public void verifyUserLoginWithInvalidUsernameAndValidPassword() throws IOException
 	{
 		String username=ExcelUtility.getStringData(2, 0,"LoginPage" );
@@ -44,7 +44,7 @@ public class LoginTest extends Base
 		
 		
 	}
-	@Test
+	@Test(priority = 1,description = "Validating UserLogin with Valid Cridential")
 	public void verifyUserLoginWithInvalidUsernameAndInvalidPassword() throws IOException
 	{
 		String username=ExcelUtility.getStringData(3, 0,"LoginPage" );
