@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\prave\AppData\Local\Temp\testng-eclipse-1032104933\testng-customsuite.xml</span>
+                    <span>C:\Users\prave\AppData\Local\Temp\testng-eclipse--1282881648\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="testScript.ManageNewsTest" class="method navigator-link" hash-for-method="verifyUserIsAbleToSearchNews">verifyUserIsAbleToSearchNews</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="testScript.AdminUsersTest" class="method navigator-link" hash-for-method="verifyUserIsAbleToRefreshAdminUsersPage">verifyUserIsAbleToRefreshAdminUsersPage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -121,16 +121,16 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testScript.ManageNewsTest</span>
+              <span class="class-name">testScript.AdminUsersTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyUserIsAbleToSearchNews">
-                  </a> <!-- verifyUserIsAbleToSearchNews -->
-                  <span class="method-name">verifyUserIsAbleToSearchNews</span>
+                  <a name="verifyUserIsAbleToRefreshAdminUsersPage">
+                  </a> <!-- verifyUserIsAbleToRefreshAdminUsersPage -->
+                  <span class="method-name">verifyUserIsAbleToRefreshAdminUsersPage</span>
                   <em>
-(Validating Search Button from Manage News)                  </em>
+(Validating Refresh Button from Admin User)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -138,7 +138,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\prave\AppData\Local\Temp\testng-eclipse-1032104933\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\prave\AppData\Local\Temp\testng-eclipse--1282881648\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -147,11 +147,11 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testScript.ManageNewsTest&quot;&gt;
+      &lt;class name=&quot;testScript.AdminUsersTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;verifyUserIsAbleToSearchNews&quot;/&gt;
+          &lt;include name=&quot;verifyUserIsAbleToRefreshAdminUsersPage&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- testScript.ManageNewsTest --&gt;
+      &lt;/class&gt; &lt;!-- testScript.AdminUsersTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -193,14 +193,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyUserIsAbleToSearchNews')
-data.setCell(0, 2, 'testScript.ManageNewsTest')
-data.setCell(0, 3, 4535);
+data.setCell(0, 1, 'verifyUserIsAbleToRefreshAdminUsersPage')
+data.setCell(0, 2, 'testScript.AdminUsersTest')
+data.setCell(0, 3, 2183);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 seconds</span>
+              <span class="suite-total-time">Total running time: 2 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -219,11 +219,11 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">testScript.ManageNewsTest</span>
+              <span class="ignored-class-name">testScript.AdminUsersTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">verifyUserIsAbleToAddNewNews</span>
+                <span class="ignored-method-name">verifyUserIsAbleToAddNewUsers</span>
                 <br/>
-                <span class="ignored-method-name">verifyUserIsAbleToRefreshNews</span>
+                <span class="ignored-method-name">verifyUserIsAbleToSearchUsers</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -235,15 +235,19 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testScript.ManageNewsTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testScript.AdminUsersTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">intializeBrowser</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyUserIsAbleToSearchNews</span>
-                <span class="method-start">4016 ms</span>
+                <span class="method-name">verifyUserIsAbleToRefreshAdminUsersPage</span>
+                <span class="method-start">2813 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">driverQuit([TestResult name=verifyUserIsAbleToRefreshAdminUsersPage status=SUCCESS method=AdminUsersTest.verify...)</span>
+                <span class="method-start">5002 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

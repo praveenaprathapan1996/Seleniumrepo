@@ -37,7 +37,7 @@ public class ManageNewsPage
 	public void clickOnRefreshButton()
 	{
 		refreshButton.click();
-		driver.navigate().refresh();
+		
 	 }
 	
 }

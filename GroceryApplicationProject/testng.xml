@@ -6,6 +6,9 @@
       <class name="testScript.LoginTest"></class>
       <class name="testScript.HomeTest"></class>
       <class name="testScript.ManageNewsTest"></class>
-    </classes>
+      <class name="testScript.AdminUsersTest"></class>
+      
+      
+      </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
