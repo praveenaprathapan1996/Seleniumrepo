@@ -24,13 +24,28 @@ public class ManageNewsPage
 	public void clickOnNewButton()
 	{
        newButton.click();
+       
+	}
+	public void enterNewNews()
+	{
        newsTextField.sendKeys("Today is Holiday");
+       
+	}
+	public void clickOnSaveButton()
+	{
+	
 	   saveButton.click();
 	}
 	public void clickOnSearchButton()
 	{
 		searchButton.click();
+	}
+	public void enterNewsOnSearchManageNews()
+	{
 	    searchField.sendKeys("Rainy Day");
+	}
+	public void clickOnSearchOption()
+	{
 	    searchOption.click();
 	}
 	

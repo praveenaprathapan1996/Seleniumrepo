@@ -20,7 +20,7 @@ public class Base
 		driver =new ChromeDriver();
 		driver.get("https://groceryapp.uniqassosiates.com/admin/login");
 		driver.manage().window().maximize();
-		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));//implicit wait
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));  //implicit wait
 	}
 @AfterMethod
 	public void driverQuit(ITestResult iTestResult) throws IOException { 

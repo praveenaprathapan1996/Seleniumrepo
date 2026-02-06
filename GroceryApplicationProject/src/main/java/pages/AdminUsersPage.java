@@ -35,19 +35,44 @@ public class AdminUsersPage
 	public void clickOnNewButtonFromAdminUser() throws IOException
 	{
 		newButton_AdminUser.click();
-		usernameField.sendKeys("robert");
-		passwordField.sendKeys("robo");
+	}
+	public void enterUsernameField(String newUsername)
+	{   
+		usernameField.sendKeys(newUsername);
+}
+	public void enterPasswordField(String newPassword)
+	{
+		
+		passwordField.sendKeys(newPassword);
+	}
+	public void selectUserType()
+	{
+		
 		Select select=new Select(usertype_DropDown);
 		select.selectByIndex(3);
+	}
+	public void clickOnSaveButton()
+	{
 		saveButton.click();
 		
 	}
 	public void clickOnSearchButtonFromAdminUser()
 	{   
 		searchButton_AdminUser.click();
+	}
+	public void enterUsernameFieldForSearchUser()
+	{
+		
 		usernameField_Search.sendKeys("Praveena");
+	}
+	public void selectUserTypeForSearchUser()
+	{
 		Select select=new Select(usertype_Search);
 		select.selectByIndex(2);
+	}
+	public void clickOnSearchOption()
+	{
+		
 		searchOption.click();
 	}
 	public void clickOnRefreshFromAdminUser()

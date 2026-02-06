@@ -25,6 +25,8 @@ public void verifyUserIsAbleToAddNewNews() throws IOException
 	homepage.clickOnMoreInfoManageNews();
 	ManageNewsPage manageNews=new ManageNewsPage(driver);
 	manageNews.clickOnNewButton();
+	manageNews.enterNewNews();
+	manageNews.clickOnSaveButton();
 
 }
 	@Test(description = "Validating Search Button from Manage News")
@@ -40,6 +42,8 @@ public void verifyUserIsAbleToSearchNews() throws IOException
 	homepage.clickOnMoreInfoManageNews();
 	ManageNewsPage manageNews=new ManageNewsPage(driver);
 	manageNews.clickOnSearchButton();
+	manageNews.enterNewsOnSearchManageNews();
+	manageNews.clickOnSearchOption();
 	
 }
 	@Test(description ="Validating Refresh Button from Manage news")
