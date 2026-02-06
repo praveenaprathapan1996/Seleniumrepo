@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-02-05T17:56:33 IST" name="Default suite" finished-at="2026-02-05T17:56:38 IST" duration-ms="5045">
+  <suite started-at="2026-02-06T10:59:17 IST" name="Default suite" finished-at="2026-02-06T10:59:25 IST" duration-ms="8836">
     <groups>
     </groups>
-    <test started-at="2026-02-05T17:56:33 IST" name="Default test" finished-at="2026-02-05T17:56:38 IST" duration-ms="5045">
+    <test started-at="2026-02-06T10:59:17 IST" name="Default test" finished-at="2026-02-06T10:59:25 IST" duration-ms="8836">
       <class name="testScript.AdminUsersTest">
-        <test-method is-config="true" signature="intializeBrowser()[pri:0, instance:testScript.AdminUsersTest@31304f14]" started-at="2026-02-05T17:56:33 IST" name="intializeBrowser" finished-at="2026-02-05T17:56:36 IST" duration-ms="2813" status="PASS">
+        <test-method is-config="true" signature="intializeBrowser()[pri:0, instance:testScript.AdminUsersTest@31304f14]" started-at="2026-02-06T10:59:17 IST" name="intializeBrowser" finished-at="2026-02-06T10:59:21 IST" duration-ms="4615" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- intializeBrowser -->
-        <test-method signature="verifyUserIsAbleToRefreshAdminUsersPage()[pri:0, instance:testScript.AdminUsersTest@31304f14]" started-at="2026-02-05T17:56:36 IST" name="verifyUserIsAbleToRefreshAdminUsersPage" description="Validating Refresh Button from Admin User" finished-at="2026-02-05T17:56:38 IST" duration-ms="2183" status="PASS">
+        <test-method signature="verifyUserIsAbleToSearchUsers()[pri:0, instance:testScript.AdminUsersTest@31304f14]" started-at="2026-02-06T10:59:21 IST" name="verifyUserIsAbleToSearchUsers" description="Validating Search Button from AdminUser Page" finished-at="2026-02-06T10:59:25 IST" duration-ms="4166" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUserIsAbleToRefreshAdminUsersPage -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScript.AdminUsersTest@31304f14]" started-at="2026-02-05T17:56:38 IST" name="driverQuit" finished-at="2026-02-05T17:56:38 IST" duration-ms="5" status="PASS">
+        </test-method> <!-- verifyUserIsAbleToSearchUsers -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScript.AdminUsersTest@31304f14]" started-at="2026-02-06T10:59:25 IST" name="driverQuit" finished-at="2026-02-06T10:59:25 IST" duration-ms="4" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyUserIsAbleToRefreshAdminUsersPage status=SUCCESS method=AdminUsersTest.verifyUserIsAbleToRefreshAdminUsersPage()[pri:0, instance:testScript.AdminUsersTest@31304f14] output={null}]]]>
+                <![CDATA[[TestResult name=verifyUserIsAbleToSearchUsers status=SUCCESS method=AdminUsersTest.verifyUserIsAbleToSearchUsers()[pri:0, instance:testScript.AdminUsersTest@31304f14] output={null}]]]>
               </value>
             </param>
           </params>

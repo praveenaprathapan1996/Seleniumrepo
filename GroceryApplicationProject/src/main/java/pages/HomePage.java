@@ -1,6 +1,7 @@
 package pages;
 
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -17,7 +18,7 @@ public class HomePage
 	@FindBy(xpath =" //img[@src='https://groceryapp.uniqassosiates.com/public/assets/admin/dist/img/avatar5.png']")WebElement adminLogOutIcon;
     @FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/logout']")WebElement logOutButton;
     @FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news']")WebElement moreInfoManageNews;
-   @FindBy(xpath = "//a[contains(text(),'More info ')]")WebElement moreInfoAdminUser;
+   @FindBy(xpath ="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin']")WebElement moreInfoAdminUser;
 public void clickOnAdminIcon()
 {
 	adminLogOutIcon.click();
@@ -32,8 +33,9 @@ public void clickOnMoreInfoManageNews()
 }
 public void clickOnMoreInfoAdminUser()
 {  
-
-	moreInfoAdminUser.click();
+ JavascriptExecutor js=(JavascriptExecutor)driver;
+ js.executeScript("arguments[0].click();",moreInfoAdminUser);
+	
 }
 
 }
