@@ -19,6 +19,9 @@ public class HomePage
     @FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/logout']")WebElement logOutButton;
     @FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news']")WebElement moreInfoManageNews;
    @FindBy(xpath ="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin']")WebElement moreInfoAdminUser;
+   @FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/news/add']")WebElement newsButton;
+   @FindBy(xpath = "//h1[text()='Admin Users']")WebElement adminUserTitle;
+   @FindBy(xpath = "//b[text()='7rmart supermarket']")WebElement pageTitle;
 public void clickOnAdminIcon()
 {
 	adminLogOutIcon.click();
@@ -38,4 +41,8 @@ public void clickOnMoreInfoAdminUser()
 	
 }
 
+public boolean loginPageDisplayWhenLogOut()
+{
+	return pageTitle.isEnabled();
+}
 }

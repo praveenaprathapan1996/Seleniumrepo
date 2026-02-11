@@ -29,11 +29,11 @@ public class WaitUtility
  		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICITWAIT)); 
  		wait.until(ExpectedConditions.elementToBeSelected(element) );
  	}
- 	public void waitUntilUrlConatins(WebDriver driver, WebElement element) 
+ 	public void waitUntilUrlConatins(WebDriver driver, WebElement element,String text) 
  	{ 
   
  		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICITWAIT)); 
- 		wait.until(ExpectedConditions.urlContains(null));
+ 		wait.until(ExpectedConditions.textToBePresentInElement(element, text));
  	}
  	public void waitUntilInvisibilityOf(WebDriver driver, WebElement element) 
  	{ 
@@ -42,4 +42,5 @@ public class WaitUtility
  		wait.until(ExpectedConditions.invisibilityOf(element));
  		
  	}
+ 	
 }

@@ -7,7 +7,7 @@ public class ExtentReportUtility
 {
 	 public static final ExtentReports extentReports = new ExtentReports();// static instance of extentreports that can 
 		// be shared accross the application 
-	 //final is for re-assignment of the object reference.
+	 //final is to prevent r re-assignment of the object reference.
 
 public synchronized static ExtentReports createExtentReports() { 
 

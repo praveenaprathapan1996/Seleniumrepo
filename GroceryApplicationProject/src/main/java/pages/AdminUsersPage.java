@@ -28,7 +28,8 @@ public class AdminUsersPage
 	@FindBy(id="un")WebElement usernameField_Search;
 	@FindBy(id="ut")WebElement usertype_Search;
 	@FindBy(name="Search")WebElement searchOption;
-	@FindBy(xpath="//a[text()=' Reset']")WebElement refreshButton_AdminUser;
+	@FindBy(xpath="//a[text()=' Reset']")WebElement resetButton_AdminUser;
+	@FindBy(xpath = "//h1[text()='Admin Users']")WebElement adminUserTitle;
 	
 	
 	
@@ -75,8 +76,21 @@ public class AdminUsersPage
 		
 		searchOption.click();
 	}
-	public void clickOnRefreshFromAdminUser()
+	public void clickOnResetFromAdminUser()
 	{
-		refreshButton_AdminUser.click();
+		resetButton_AdminUser.click();
+	}
+	public String getTextFromAdminUserTitle()
+	{
+		return adminUserTitle.getText();
+	}
+	
+	public boolean resetButtonIsEnabled()
+	{
+		return resetButton_AdminUser.isEnabled();
+	}
+	public boolean searchOptionIsEnabled()
+	{
+		return searchOption.isEnabled();
 	}
 }

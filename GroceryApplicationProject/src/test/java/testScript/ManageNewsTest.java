@@ -2,6 +2,7 @@ package testScript;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import automationCore.Base;
@@ -12,7 +13,7 @@ import utilities.ExcelUtility;
 
 public class ManageNewsTest extends Base
 {
-	@Test(description = "Validating New Button from Manage News Page")
+	@Test(description = "Validating that user can add new news ")
 public void verifyUserIsAbleToAddNewNews() throws IOException
 {
 	String username=ExcelUtility.getStringData(0, 0,"LoginPage" );
@@ -27,9 +28,11 @@ public void verifyUserIsAbleToAddNewNews() throws IOException
 	manageNews.clickOnNewButton();
 	manageNews.enterNewNews();
 	manageNews.clickOnSaveButton();
+	boolean enterNewsInfor=manageNews.enterNewsInformationDisplay();
+	Assert.assertTrue(enterNewsInfor, "User unable to add new news");
 
 }
-	@Test(description = "Validating Search Button from Manage News")
+	@Test(description = "Validating user can able to Search  News")
 public void verifyUserIsAbleToSearchNews() throws IOException
 {
 	String username=ExcelUtility.getStringData(0, 0,"LoginPage" );
@@ -44,10 +47,12 @@ public void verifyUserIsAbleToSearchNews() throws IOException
 	manageNews.clickOnSearchButton();
 	manageNews.enterNewsOnSearchManageNews();
 	manageNews.clickOnSearchOption();
+	boolean searchEnable=manageNews.searchButtonIsEnabled();
+	Assert.assertTrue(searchEnable, "User unable to search news");
 	
 }
-	@Test(description ="Validating Refresh Button from Manage news")
-	public void verifyUserIsAbleToRefreshNews() throws IOException
+	@Test(description ="Validating that user can Reset  Manage news page")
+	public void verifyUserIsAbleToResetNews() throws IOException
 	{
 		String username=ExcelUtility.getStringData(0, 0,"LoginPage" );
 		String password=ExcelUtility.getStringData(0, 1, "LoginPage");
@@ -58,6 +63,8 @@ public void verifyUserIsAbleToSearchNews() throws IOException
 		HomePage homepage=new HomePage(driver);
 		homepage.clickOnMoreInfoManageNews();
 		ManageNewsPage manageNews=new ManageNewsPage(driver);
-		manageNews.clickOnRefreshButton();
+		manageNews.clickOnResetButton();
+		boolean resetEnable=manageNews.resetButtonIsEnabled();
+		Assert.assertTrue(resetEnable, "user unable to reset manage new page");
 	}
 }

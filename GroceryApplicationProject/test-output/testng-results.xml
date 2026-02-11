@@ -1,89 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-02-09T18:28:13 IST" name="Suite" finished-at="2026-02-09T18:28:30 IST" duration-ms="16257">
+  <suite started-at="2026-02-11T15:14:56 IST" name="cross browser testing" finished-at="2026-02-11T15:15:05 IST" duration-ms="8928">
     <groups>
     </groups>
-    <test started-at="2026-02-09T18:28:13 IST" name="Test" finished-at="2026-02-09T18:28:30 IST" duration-ms="16257">
-      <class name="testScript.LoginTest">
-        <test-method is-config="true" signature="intializeBrowser()[pri:0, instance:testScript.LoginTest@4dc27487]" started-at="2026-02-09T18:28:14 IST" name="intializeBrowser" finished-at="2026-02-09T18:28:19 IST" duration-ms="5627" status="PASS">
+    <test started-at="2026-02-11T15:14:56 IST" name="ChromeTest" finished-at="2026-02-11T15:15:01 IST" duration-ms="5124">
+      <class name="testScript.HomeTest">
+        <test-method is-config="true" signature="intializeBrowser()[pri:0, instance:testScript.HomeTest@1aafa419]" started-at="2026-02-11T15:14:56 IST" name="intializeBrowser" finished-at="2026-02-11T15:14:59 IST" duration-ms="2852" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- intializeBrowser -->
-        <test-method signature="verifyUserLoginWithInvalidUsernameAndInvalidPassword()[pri:1, instance:testScript.LoginTest@4dc27487]" started-at="2026-02-09T18:28:19 IST" name="verifyUserLoginWithInvalidUsernameAndInvalidPassword" description="Validating UserLogin with Valid Cridential" finished-at="2026-02-09T18:28:21 IST" duration-ms="1709" status="PASS">
+        <test-method signature="verifyUserIsAbleToSuccessfullyLogOut()[pri:0, instance:testScript.HomeTest@1aafa419]" started-at="2026-02-11T15:14:59 IST" name="verifyUserIsAbleToSuccessfullyLogOut" description="Validating Logout functionality from HomePage" finished-at="2026-02-11T15:15:01 IST" duration-ms="2215" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUserLoginWithInvalidUsernameAndInvalidPassword -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScript.LoginTest@4dc27487]" started-at="2026-02-09T18:28:21 IST" name="driverQuit" finished-at="2026-02-09T18:28:21 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- verifyUserIsAbleToSuccessfullyLogOut -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScript.HomeTest@1aafa419]" started-at="2026-02-11T15:15:01 IST" name="driverQuit" finished-at="2026-02-11T15:15:01 IST" duration-ms="4" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyUserLoginWithInvalidUsernameAndInvalidPassword status=SUCCESS method=LoginTest.verifyUserLoginWithInvalidUsernameAndInvalidPassword()[pri:1, instance:testScript.LoginTest@4dc27487] output={null}]]]>
+                <![CDATA[[TestResult name=verifyUserIsAbleToSuccessfullyLogOut status=SUCCESS method=HomeTest.verifyUserIsAbleToSuccessfullyLogOut()[pri:0, instance:testScript.HomeTest@1aafa419] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-        <test-method is-config="true" signature="intializeBrowser()[pri:0, instance:testScript.LoginTest@4dc27487]" started-at="2026-02-09T18:28:21 IST" name="intializeBrowser" finished-at="2026-02-09T18:28:23 IST" duration-ms="2545" status="PASS">
+      </class> <!-- testScript.HomeTest -->
+    </test> <!-- ChromeTest -->
+    <test started-at="2026-02-11T15:15:01 IST" name="FirefoxTest" finished-at="2026-02-11T15:15:05 IST" duration-ms="3761">
+      <class name="testScript.HomeTest">
+        <test-method is-config="true" signature="intializeBrowser()[pri:0, instance:testScript.HomeTest@1c1bbc4e]" started-at="2026-02-11T15:15:01 IST" name="intializeBrowser" finished-at="2026-02-11T15:15:04 IST" duration-ms="2765" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- intializeBrowser -->
-        <test-method signature="verifyUserLoginWithInvalidUsernameAndValidPassword()[pri:2, instance:testScript.LoginTest@4dc27487]" started-at="2026-02-09T18:28:23 IST" name="verifyUserLoginWithInvalidUsernameAndValidPassword" description="Validating UserLogin with Valid Cridential" finished-at="2026-02-09T18:28:24 IST" duration-ms="311" status="PASS">
+        <test-method signature="verifyUserIsAbleToSuccessfullyLogOut()[pri:0, instance:testScript.HomeTest@1c1bbc4e]" started-at="2026-02-11T15:15:04 IST" name="verifyUserIsAbleToSuccessfullyLogOut" description="Validating Logout functionality from HomePage" finished-at="2026-02-11T15:15:05 IST" duration-ms="990" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUserLoginWithInvalidUsernameAndValidPassword -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScript.LoginTest@4dc27487]" started-at="2026-02-09T18:28:24 IST" name="driverQuit" finished-at="2026-02-09T18:28:24 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- verifyUserIsAbleToSuccessfullyLogOut -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScript.HomeTest@1c1bbc4e]" started-at="2026-02-11T15:15:05 IST" name="driverQuit" finished-at="2026-02-11T15:15:05 IST" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyUserLoginWithInvalidUsernameAndValidPassword status=SUCCESS method=LoginTest.verifyUserLoginWithInvalidUsernameAndValidPassword()[pri:2, instance:testScript.LoginTest@4dc27487] output={null}]]]>
+                <![CDATA[[TestResult name=verifyUserIsAbleToSuccessfullyLogOut status=SUCCESS method=HomeTest.verifyUserIsAbleToSuccessfullyLogOut()[pri:0, instance:testScript.HomeTest@1c1bbc4e] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-        <test-method is-config="true" signature="intializeBrowser()[pri:0, instance:testScript.LoginTest@4dc27487]" started-at="2026-02-09T18:28:24 IST" name="intializeBrowser" finished-at="2026-02-09T18:28:26 IST" duration-ms="2270" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- intializeBrowser -->
-        <test-method signature="verifyUserLoginWithValidUsernameAndInvalidPassword()[pri:3, instance:testScript.LoginTest@4dc27487]" started-at="2026-02-09T18:28:26 IST" name="verifyUserLoginWithValidUsernameAndInvalidPassword" description="Validating UserLogin with Valid Cridential" finished-at="2026-02-09T18:28:26 IST" duration-ms="365" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyUserLoginWithValidUsernameAndInvalidPassword -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScript.LoginTest@4dc27487]" started-at="2026-02-09T18:28:26 IST" name="driverQuit" finished-at="2026-02-09T18:28:26 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyUserLoginWithValidUsernameAndInvalidPassword status=SUCCESS method=LoginTest.verifyUserLoginWithValidUsernameAndInvalidPassword()[pri:3, instance:testScript.LoginTest@4dc27487] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverQuit -->
-        <test-method is-config="true" signature="intializeBrowser()[pri:0, instance:testScript.LoginTest@4dc27487]" started-at="2026-02-09T18:28:26 IST" name="intializeBrowser" finished-at="2026-02-09T18:28:29 IST" duration-ms="2779" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- intializeBrowser -->
-        <test-method signature="verifyUserLoginWithValidUsernameAndValidPassword()[pri:4, instance:testScript.LoginTest@4dc27487]" started-at="2026-02-09T18:28:29 IST" name="verifyUserLoginWithValidUsernameAndValidPassword" description="Validating UserLogin with Valid Cridential" finished-at="2026-02-09T18:28:30 IST" duration-ms="566" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyUserLoginWithValidUsernameAndValidPassword -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScript.LoginTest@4dc27487]" started-at="2026-02-09T18:28:30 IST" name="driverQuit" finished-at="2026-02-09T18:28:30 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyUserLoginWithValidUsernameAndValidPassword status=SUCCESS method=LoginTest.verifyUserLoginWithValidUsernameAndValidPassword()[pri:4, instance:testScript.LoginTest@4dc27487] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverQuit -->
-      </class> <!-- testScript.LoginTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- testScript.HomeTest -->
+    </test> <!-- FirefoxTest -->
+  </suite> <!-- cross browser testing -->
 </testng-results>

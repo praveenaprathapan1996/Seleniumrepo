@@ -2,6 +2,7 @@ package testScript;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import automationCore.Base;
@@ -33,6 +34,9 @@ public void verifyUserIsAbleToAddNewUsers() throws IOException
 	adminUserPage.enterPasswordField(newPassword);
 	adminUserPage.selectUserType();
 	adminUserPage.clickOnSaveButton();
+	String expected="Admin Users";
+	String actual=adminUserPage.getTextFromAdminUserTitle();
+	Assert.assertEquals(actual,expected,"User  unable to create new user");
 	
 }@Test(description = "Validating Search Users")
 public void verifyUserIsAbleToSearchUsers() throws IOException
@@ -50,10 +54,13 @@ public void verifyUserIsAbleToSearchUsers() throws IOException
 	adminUserPage.enterUsernameFieldForSearchUser();
 	adminUserPage.selectUserTypeForSearchUser();
 	adminUserPage.clickOnSearchOption();
+    boolean serachselection=adminUserPage.searchOptionIsEnabled();
+    Assert.assertTrue(serachselection, "User unable to search Users");
+    
 	
 	
 	}
-@Test(description = "Validating Refresh Page")
+@Test(description = "Validating Reset Page")
 public void verifyUserIsAbleToRefreshAdminUsersPage() throws IOException
 {
 	String username=ExcelUtility.getStringData(0, 0,"LoginPage" );
@@ -65,7 +72,9 @@ public void verifyUserIsAbleToRefreshAdminUsersPage() throws IOException
 	HomePage homepage=new HomePage(driver);
     homepage.clickOnMoreInfoAdminUser();
 	AdminUsersPage adminUserPage=new AdminUsersPage(driver);
-	adminUserPage.clickOnRefreshFromAdminUser();
+	adminUserPage.clickOnResetFromAdminUser();
+	boolean resetoption=adminUserPage.resetButtonIsEnabled();
+	Assert.assertFalse(resetoption, "User can reset AdminUser page");
 	
 }
 }

@@ -19,7 +19,8 @@ public class ManageNewsPage
 	@FindBy(xpath ="//a[@href='javascript:void(0)']")WebElement searchButton;
 	@FindBy(name="un")WebElement searchField;
 	@FindBy(name="Search")WebElement searchOption;
-	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news']")WebElement refreshButton;
+	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news']")WebElement resetButton;
+	@FindBy(xpath = "//h3[text()='Enter News Informations']")WebElement enterNewsInformation;
 	
 	public void clickOnNewButton()
 	{
@@ -49,10 +50,21 @@ public class ManageNewsPage
 	    searchOption.click();
 	}
 	
-	public void clickOnRefreshButton()
+	public void clickOnResetButton()
 	{
-		refreshButton.click();
+		resetButton.click();
 		
 	 }
-	
+	public boolean enterNewsInformationDisplay()
+	{
+		return enterNewsInformation.isDisplayed();
+	}
+	public boolean searchButtonIsEnabled()
+	{
+		return searchOption.isEnabled();
+	}
+	public boolean resetButtonIsEnabled()
+	{
+		return resetButton.isEnabled();
+	}
 }
