@@ -10,87 +10,95 @@ import org.openqa.selenium.support.ui.Select;
 
 import utilities.ExcelUtility;
 
-public class AdminUsersPage
-{
+public class AdminUsersPage {
 	public WebDriver driver;
-	public AdminUsersPage(WebDriver driver)
-	{
-		this.driver=driver;
+
+	public AdminUsersPage(WebDriver driver) {
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
-     }
-	
-	@FindBy(xpath = "//a[@href='javascript:void(0)']")WebElement newButton_AdminUser;
-	@FindBy(id="username")WebElement usernameField;
-	@FindBy(id="password")WebElement passwordField;
-	@FindBy(id="user_type")WebElement usertype_DropDown;
-	@FindBy(name = "Create")WebElement saveButton;
-	@FindBy(xpath = "//a[contains(text(),' Search')]")WebElement searchButton_AdminUser;
-	@FindBy(id="un")WebElement usernameField_Search;
-	@FindBy(id="ut")WebElement usertype_Search;
-	@FindBy(name="Search")WebElement searchOption;
-	@FindBy(xpath="//a[text()=' Reset']")WebElement resetButton_AdminUser;
-	@FindBy(xpath = "//h1[text()='Admin Users']")WebElement adminUserTitle;
-	
-	
-	
-	public void clickOnNewButtonFromAdminUser() throws IOException
-	{
+	}
+
+	@FindBy(xpath = "//a[@href='javascript:void(0)']")
+	WebElement newButton_AdminUser;
+	@FindBy(id = "username")
+	WebElement usernameField;
+	@FindBy(id = "password")
+	WebElement passwordField;
+	@FindBy(id = "user_type")
+	WebElement usertype_DropDown;
+	@FindBy(name = "Create")
+	WebElement saveButton;
+	@FindBy(xpath = "//a[contains(text(),' Search')]")
+	WebElement searchButton_AdminUser;
+	@FindBy(id = "un")
+	WebElement usernameField_Search;
+	@FindBy(id = "ut")
+	WebElement usertype_Search;
+	@FindBy(name = "Search")
+	WebElement searchOption;
+	@FindBy(xpath = "//a[text()='Home']")
+	WebElement homeText;
+	@FindBy(xpath = "//a[text()=' Reset']")
+	WebElement resetButton_AdminUser;
+	@FindBy(xpath = "//h1[text()='Admin Users']")
+	WebElement adminUserTitle;
+
+	public void clickOnNewButtonFromAdminUser() throws IOException {
 		newButton_AdminUser.click();
 	}
-	public void enterUsernameField(String newUsername)
-	{   
+
+	public void enterUsernameField(String newUsername) {
 		usernameField.sendKeys(newUsername);
-}
-	public void enterPasswordField(String newPassword)
-	{
-		
+	}
+
+	public void enterPasswordField(String newPassword) {
+
 		passwordField.sendKeys(newPassword);
 	}
-	public void selectUserType()
-	{
-		
-		Select select=new Select(usertype_DropDown);
+
+	public void selectUserType() {
+
+		Select select = new Select(usertype_DropDown);
 		select.selectByIndex(3);
 	}
-	public void clickOnSaveButton()
-	{
+
+	public void clickOnSaveButton() {
 		saveButton.click();
-		
+
 	}
-	public void clickOnSearchButtonFromAdminUser()
-	{   
+
+	public void clickOnSearchButtonFromAdminUser() {
 		searchButton_AdminUser.click();
 	}
-	public void enterUsernameFieldForSearchUser()
-	{
-		
+
+	public void enterUsernameFieldForSearchUser() {
+
 		usernameField_Search.sendKeys("Praveena");
 	}
-	public void selectUserTypeForSearchUser()
-	{
-		Select select=new Select(usertype_Search);
+
+	public void selectUserTypeForSearchUser() {
+		Select select = new Select(usertype_Search);
 		select.selectByIndex(2);
 	}
-	public void clickOnSearchOption()
-	{
-		
+
+	public void clickOnSearchOption() {
+
 		searchOption.click();
 	}
-	public void clickOnResetFromAdminUser()
-	{
+
+	public void clickOnResetFromAdminUser() {
 		resetButton_AdminUser.click();
 	}
-	public String getTextFromAdminUserTitle()
-	{
+
+	public String getTextFromAdminUserTitle() {
 		return adminUserTitle.getText();
 	}
-	
-	public boolean resetButtonIsEnabled()
-	{
-		return resetButton_AdminUser.isEnabled();
+
+	public boolean homeTextDisplay() {
+		return homeText.isDisplayed();
 	}
-	public boolean searchOptionIsEnabled()
-	{
+
+	public boolean searchOptionIsEnabled() {
 		return searchOption.isEnabled();
 	}
 }

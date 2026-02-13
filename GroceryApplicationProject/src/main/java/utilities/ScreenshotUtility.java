@@ -10,26 +10,29 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.io.FileHandler;
 
-public class ScreenshotUtility 
-{
-	public void getScreenshot(WebDriver driver, String failedTestCase) throws IOException { 
-		  
- 		TakesScreenshot scrShot = (TakesScreenshot) driver; //TakeScreenshot is a predefined interface,that helps to take screenshot.
- 		File screenShot = scrShot.getScreenshotAs(OutputType.FILE); //to get as a file format.
-  
- 		String timeStamp = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss").format(new Date()); //for differentiate each screenshot with date and time
-  
- 		File f1 = new File(System.getProperty("user.dir") + "//OutputScreenShot");// create file in directory as a folder.from this to
- 		if (!f1.exists()) { 
-  
- 			f1.mkdirs(); 
- 		}                                                                                                        //this to store screenshot
- 		String destination = System.getProperty("user.dir") + "//outputScreenShot//" + failedTestCase + timeStamp 
- 				+ ".png"; 
- 		// String destination = f1.getPath() + "//" + failedTestCase + timeStamp + 
- 		// ".png"; 
-  
- 		File finalDestination = new File(destination); 
- 		FileHandler.copy(screenShot, finalDestination); // to copy all screenshots and moves them to the folder
- 	}
+public class ScreenshotUtility {
+	public void getScreenshot(WebDriver driver, String failedTestCase) throws IOException {
+
+		TakesScreenshot scrShot = (TakesScreenshot) driver; // TakeScreenshot is a predefined interface,that helps to
+															// take screenshot.
+		File screenShot = scrShot.getScreenshotAs(OutputType.FILE); // to get as a file format.
+
+		String timeStamp = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss").format(new Date()); // for differentiate each
+																							// screenshot with date and
+																							// time
+
+		File f1 = new File(System.getProperty("user.dir") + "//OutputScreenShot");// create file in directory as a
+																					// folder.from this to
+		if (!f1.exists()) {
+
+			f1.mkdirs();
+		} // this to store screenshot
+		String destination = System.getProperty("user.dir") + "//outputScreenShot//" + failedTestCase + timeStamp
+				+ ".png";
+		// String destination = f1.getPath() + "//" + failedTestCase + timeStamp +
+		// ".png";
+
+		File finalDestination = new File(destination);
+		FileHandler.copy(screenShot, finalDestination); // to copy all screenshots and moves them to the folder
+	}
 }
