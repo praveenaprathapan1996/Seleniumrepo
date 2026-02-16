@@ -9,9 +9,13 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import utilities.ExcelUtility;
+import utilities.PageUtility;
+import utilities.WaitUtility;
 
 public class AdminUsersPage {
 	public WebDriver driver;
+	WaitUtility wait=new WaitUtility();
+	PageUtility page=new PageUtility();
 
 	public AdminUsersPage(WebDriver driver) {
 		this.driver = driver;
@@ -57,17 +61,21 @@ public class AdminUsersPage {
 	}
 
 	public void selectUserType() {
+		
+		page.selectDropdownWithIndex(usertype_DropDown, 3);
 
-		Select select = new Select(usertype_DropDown);
-		select.selectByIndex(3);
+		//Select select = new Select(usertype_DropDown);
+		//select.selectByIndex(3);
 	}
 
 	public void clickOnSaveButton() {
+		wait.waitUntilElementToBeClickable(driver, saveButton);
 		saveButton.click();
 
 	}
 
 	public void clickOnSearchButtonFromAdminUser() {
+
 		searchButton_AdminUser.click();
 	}
 
@@ -77,12 +85,14 @@ public class AdminUsersPage {
 	}
 
 	public void selectUserTypeForSearchUser() {
-		Select select = new Select(usertype_Search);
-		select.selectByIndex(2);
+		page.selectDropdownWithIndex(usertype_Search, 2);
+		
+		//Select select = new Select(usertype_Search);
+		//select.selectByIndex(2);
 	}
 
 	public void clickOnSearchOption() {
-
+        wait.waitUntilElementToBeClickable(driver, searchOption);
 		searchOption.click();
 	}
 

@@ -3,6 +3,7 @@ package testScript;
 import java.io.IOException;
 
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import automationCore.Base;
@@ -50,10 +51,10 @@ public class LoginTest extends Base {
 
 	}
 
-	@Test(priority = 1, description = "Validating UserLogin with invalid Cridential", groups = { "smoke" })
-	public void verifyUserLoginWithInvalidUsernameAndInvalidPassword() throws IOException {
-		String username = ExcelUtility.getStringData(3, 0, "LoginPage");
-		String password = ExcelUtility.getStringData(3, 1, "LoginPage");
+	@Test(priority = 1, description = "Validating UserLogin with invalid Cridential", groups = { "smoke" },dataProvider = "loginProvider")
+	public void verifyUserLoginWithInvalidUsernameAndInvalidPassword(String username,String password) throws IOException {
+		//String username = ExcelUtility.getStringData(3, 0, "LoginPage");
+		//String password = ExcelUtility.getStringData(3, 1, "LoginPage");
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.enterUsernameOnUserNameField(username);
 		loginpage.enterPasswordOnPasswordField(password);
@@ -63,5 +64,11 @@ public class LoginTest extends Base {
 		Assert.assertEquals(actual, expected, Constant.INVALIDCREDENTIALERROR);
 
 	}
-
+	@DataProvider(name = "loginProvider") 
+ 	public Object[][] getDataFromDataProvider() throws IOException { 
+  
+ 		return new Object[][] { new Object[] { "admin", "admin22" }, new Object[] { "admin123", "123" }}; 
+ 				// new Object[] {ExcelUtility.getStringData(3, 0,"LoginPage"),ExcelUtility.getStringData(3,1 ,"LoginPage")} 
+ 			
+	}
 }

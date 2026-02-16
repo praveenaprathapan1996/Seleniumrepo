@@ -6,8 +6,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utilities.PageUtility;
+
 public class HomePage {
 	public WebDriver driver;
+	PageUtility page=new PageUtility();
 
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
@@ -42,8 +45,9 @@ public class HomePage {
 	}
 
 	public void clickOnMoreInfoAdminUser() {
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click();", moreInfoAdminUser);
+		page.clickUsingJavascriptExcecutor(driver, moreInfoAdminUser);
+		//JavascriptExecutor js = (JavascriptExecutor) driver;
+		//js.executeScript("arguments[0].click();", moreInfoAdminUser);
 
 	}
 
