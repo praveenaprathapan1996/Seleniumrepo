@@ -14,8 +14,8 @@ import utilities.WaitUtility;
 
 public class AdminUsersPage {
 	public WebDriver driver;
-	WaitUtility wait=new WaitUtility();
-	PageUtility page=new PageUtility();
+	WaitUtility wait = new WaitUtility();
+	PageUtility page = new PageUtility();
 
 	public AdminUsersPage(WebDriver driver) {
 		this.driver = driver;
@@ -40,72 +40,81 @@ public class AdminUsersPage {
 	WebElement usertype_Search;
 	@FindBy(name = "Search")
 	WebElement searchOption;
-	@FindBy(xpath = "//a[text()='Home']")
-	WebElement homeText;
+	@FindBy(xpath = "//h1[text()='Admin Users']")
+	WebElement adminUserText;
 	@FindBy(xpath = "//a[text()=' Reset']")
 	WebElement resetButton_AdminUser;
 	@FindBy(xpath = "//h1[text()='Admin Users']")
 	WebElement adminUserTitle;
 
-	public void clickOnNewButtonFromAdminUser() throws IOException {
+	public AdminUsersPage clickOnNewButtonFromAdminUser() throws IOException {
 		newButton_AdminUser.click();
+		return this;
 	}
 
-	public void enterUsernameField(String newUsername) {
+	public AdminUsersPage enterUsernameField(String newUsername) {
 		usernameField.sendKeys(newUsername);
+		return this;
 	}
 
-	public void enterPasswordField(String newPassword) {
+	public AdminUsersPage enterPasswordField(String newPassword) {
 
 		passwordField.sendKeys(newPassword);
+		return this;
 	}
 
-	public void selectUserType() {
-		
+	public AdminUsersPage selectUserType() {
+
 		page.selectDropdownWithIndex(usertype_DropDown, 3);
+		return this;
 
-		//Select select = new Select(usertype_DropDown);
-		//select.selectByIndex(3);
+		// Select select = new Select(usertype_DropDown);
+		// select.selectByIndex(3);
 	}
 
-	public void clickOnSaveButton() {
+	public AdminUsersPage clickOnSaveButton() {
 		wait.waitUntilElementToBeClickable(driver, saveButton);
 		saveButton.click();
+		return this;
 
 	}
 
-	public void clickOnSearchButtonFromAdminUser() {
+	public AdminUsersPage clickOnSearchButtonFromAdminUser() {
 
 		searchButton_AdminUser.click();
+		return this;
 	}
 
-	public void enterUsernameFieldForSearchUser() {
+	public AdminUsersPage enterUsernameFieldForSearchUser() {
 
 		usernameField_Search.sendKeys("Praveena");
+		return this;
 	}
 
-	public void selectUserTypeForSearchUser() {
+	public AdminUsersPage selectUserTypeForSearchUser() {
 		page.selectDropdownWithIndex(usertype_Search, 2);
-		
-		//Select select = new Select(usertype_Search);
-		//select.selectByIndex(2);
+		return this;
+		// Select select = new Select(usertype_Search);
+		// select.selectByIndex(2);
 	}
 
-	public void clickOnSearchOption() {
-        wait.waitUntilElementToBeClickable(driver, searchOption);
+	public AdminUsersPage clickOnSearchOption() {
+		wait.waitUntilElementToBeClickable(driver, searchOption);
 		searchOption.click();
+		return this;
 	}
 
-	public void clickOnResetFromAdminUser() {
+	public AdminUsersPage clickOnResetFromAdminUser() {
 		resetButton_AdminUser.click();
+		return this;
 	}
 
 	public String getTextFromAdminUserTitle() {
 		return adminUserTitle.getText();
 	}
 
-	public boolean homeTextDisplay() {
-		return homeText.isDisplayed();
+	public boolean resetButtonIsEnabled() {
+		return resetButton_AdminUser.isEnabled();
 	}
 
 	public boolean searchOptionIsEnabled() {

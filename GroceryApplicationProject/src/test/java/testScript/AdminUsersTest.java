@@ -14,25 +14,23 @@ import utilities.ExcelUtility;
 import utilities.FakerUtility;
 
 public class AdminUsersTest extends Base {
-	@Test(description = "Validating new User creation")
+	HomePage homepage;
+	AdminUsersPage adminUserPage;
+
+	@Test(description = "Validating new User creation", retryAnalyzer = retry.RetryMechanism.class)
 	public void verifyUserIsAbleToAddNewUsers() throws IOException {
 		String username = ExcelUtility.getStringData(0, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(0, 1, "LoginPage");
 		LoginPage loginpage = new LoginPage(driver);
-		loginpage.enterUsernameOnUserNameField(username);
-		loginpage.enterPasswordOnPasswordField(password);
-		loginpage.clickOnsignInButton();
-		HomePage homepage = new HomePage(driver);
-		homepage.clickOnMoreInfoAdminUser();
-		AdminUsersPage adminUserPage = new AdminUsersPage(driver);
+		loginpage.enterUsernameOnUserNameField(username).enterPasswordOnPasswordField(password);
+		homepage = loginpage.clickOnsignInButton();
+		adminUserPage = homepage.clickOnMoreInfoAdminUser();
 		adminUserPage.clickOnNewButtonFromAdminUser();
 		FakerUtility faker = new FakerUtility();
 		String newUsername = faker.createRandomUsername();
 		String newPassword = faker.createRandomPassword();
-		adminUserPage.enterUsernameField(newUsername);
-		adminUserPage.enterPasswordField(newPassword);
-		adminUserPage.selectUserType();
-		adminUserPage.clickOnSaveButton();
+		adminUserPage.enterUsernameField(newUsername).enterPasswordField(newPassword).selectUserType()
+				.clickOnSaveButton();
 		String expected = "Admin Users";
 		String actual = adminUserPage.getTextFromAdminUserTitle();
 		Assert.assertEquals(actual, expected, Constant.ADDNEWUSERERROR);
@@ -44,35 +42,27 @@ public class AdminUsersTest extends Base {
 		String username = ExcelUtility.getStringData(0, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(0, 1, "LoginPage");
 		LoginPage loginpage = new LoginPage(driver);
-		loginpage.enterUsernameOnUserNameField(username);
-		loginpage.enterPasswordOnPasswordField(password);
-		loginpage.clickOnsignInButton();
-		HomePage homepage = new HomePage(driver);
-		homepage.clickOnMoreInfoAdminUser();
-		AdminUsersPage adminUserPage = new AdminUsersPage(driver);
-		adminUserPage.clickOnSearchButtonFromAdminUser();
-		adminUserPage.enterUsernameFieldForSearchUser();
-		adminUserPage.selectUserTypeForSearchUser();
-		adminUserPage.clickOnSearchOption();
+		loginpage.enterUsernameOnUserNameField(username).enterPasswordOnPasswordField(password);
+		homepage = loginpage.clickOnsignInButton();
+		adminUserPage = homepage.clickOnMoreInfoAdminUser();
+		adminUserPage.clickOnSearchButtonFromAdminUser().enterUsernameFieldForSearchUser().selectUserTypeForSearchUser()
+				.clickOnSearchOption();
 		boolean serachselection = adminUserPage.searchOptionIsEnabled();
 		Assert.assertTrue(serachselection, Constant.SEARCHUSERERROR);
 
 	}
 
-	@Test(description = "Validating Reset Page", retryAnalyzer = retry.RetryMechanism.class)
+	@Test(description = "Validating Reset Page")
 	public void verifyUserIsAbleToRefreshAdminUsersPage() throws IOException {
 		String username = ExcelUtility.getStringData(0, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(0, 1, "LoginPage");
 		LoginPage loginpage = new LoginPage(driver);
-		loginpage.enterUsernameOnUserNameField(username);
-		loginpage.enterPasswordOnPasswordField(password);
-		loginpage.clickOnsignInButton();
-		HomePage homepage = new HomePage(driver);
-		homepage.clickOnMoreInfoAdminUser();
-		AdminUsersPage adminUserPage = new AdminUsersPage(driver);
+		loginpage.enterUsernameOnUserNameField(username).enterPasswordOnPasswordField(password);
+		homepage = loginpage.clickOnsignInButton();
+		adminUserPage = homepage.clickOnMoreInfoAdminUser();
 		adminUserPage.clickOnResetFromAdminUser();
-		boolean resetoption = adminUserPage.homeTextDisplay();
-		Assert.assertFalse(resetoption, Constant.ADMINUSERRESTERROR);
+		boolean resetoption = adminUserPage.resetButtonIsEnabled();
+		Assert.assertTrue(resetoption, Constant.ADMINUSERRESTERROR);
 
 	}
 }

@@ -25,17 +25,22 @@ public class LoginPage {
 	WebElement startYourSession;
 	@FindBy(xpath = "//b[text()='7rmart supermarket']")
 	WebElement pageTitle;
+	@FindBy(xpath = "//h5[text()=' Alert!']")
+	WebElement alertMessage;
 
-	public void enterUsernameOnUserNameField(String username) {
+	public LoginPage enterUsernameOnUserNameField(String username) {
 		usernameField.sendKeys(username);
+		return this;
 	}
 
-	public void enterPasswordOnPasswordField(String password) {
+	public LoginPage enterPasswordOnPasswordField(String password) {
 		passwordField.sendKeys(password);
+		return this;
 	}
 
-	public void clickOnsignInButton() {
+	public HomePage clickOnsignInButton() {
 		signInButton.click();
+		return new HomePage(driver);
 	}
 
 	public boolean dashBoardDisplayed() {
@@ -50,8 +55,7 @@ public class LoginPage {
 		return pageTitle.getText();
 	}
 
-	public boolean getStringFromTitle() {
-		return pageTitle.isDisplayed();
+	public boolean alertFromInvalidcredntial() {
+		return alertMessage.isDisplayed();
 	}
-
 }

@@ -14,13 +14,13 @@ import utilities.ExtentReportUtility;
 
 public class Listners extends Base implements ITestListener {
 	ExtentTest test;
-	ExtentReports extent = ExtentReportUtility.createExtentReports();
+	ExtentReports extent = ExtentReportUtility.createExtentReports(); // configuration of ExtentReportUtility class
 	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
 
 	public void onTestStart(ITestResult result) {
 
 		ITestListener.super.onTestStart(result);
-		test = extent.createTest(result.getMethod().getMethodName());
+		test = extent.createTest(result.getMethod().getMethodName());// fetch method name and attached to the report
 		extentTest.set(test);
 
 	}

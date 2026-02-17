@@ -7,12 +7,10 @@ public class FakerUtility {
 
 	public String createRandomUsername() {
 		return faker.name().username();
-
 	}
 
 	public String createRandomPassword() {
 		return faker.internet().password();
-
 	}
 
 	public String createRandomEmail() {

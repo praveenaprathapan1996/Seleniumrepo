@@ -10,7 +10,7 @@ import utilities.PageUtility;
 
 public class HomePage {
 	public WebDriver driver;
-	PageUtility page=new PageUtility();
+	PageUtility page = new PageUtility();
 
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
@@ -25,29 +25,29 @@ public class HomePage {
 	WebElement moreInfoManageNews;
 	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin']")
 	WebElement moreInfoAdminUser;
-	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/news/add']")
-	WebElement newsButton;
-	@FindBy(xpath = "//h1[text()='Admin Users']")
-	WebElement adminUserTitle;
 	@FindBy(xpath = "//b[text()='7rmart supermarket']")
 	WebElement pageTitle;
 
-	public void clickOnAdminIcon() {
+	public HomePage clickOnAdminIcon() {
 		adminLogOutIcon.click();
+		return this;
 	}
 
-	public void clickOnLogOutButton() {
+	public LoginPage clickOnLogOutButton() {
 		logOutButton.click();
+		return new LoginPage(driver);
 	}
 
-	public void clickOnMoreInfoManageNews() {
+	public ManageNewsPage clickOnMoreInfoManageNews() {
 		moreInfoManageNews.click();
+		return new ManageNewsPage(driver);
 	}
 
-	public void clickOnMoreInfoAdminUser() {
+	public AdminUsersPage clickOnMoreInfoAdminUser() {
 		page.clickUsingJavascriptExcecutor(driver, moreInfoAdminUser);
-		//JavascriptExecutor js = (JavascriptExecutor) driver;
-		//js.executeScript("arguments[0].click();", moreInfoAdminUser);
+		return new AdminUsersPage(driver);
+		// JavascriptExecutor js = (JavascriptExecutor) driver;
+		// js.executeScript("arguments[0].click();", moreInfoAdminUser);
 
 	}
 

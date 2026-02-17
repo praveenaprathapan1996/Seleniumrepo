@@ -13,7 +13,6 @@ public class PageUtility {
 
 		Select object = new Select(element);
 		object.selectByValue(value);
-
 	}
 
 	public void selectDropdownWithIndex(WebElement element, int index) {

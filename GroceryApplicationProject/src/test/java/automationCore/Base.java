@@ -26,8 +26,8 @@ public class Base {
 	@Parameters("browser")
 
 	public void intializeBrowser(String browser) throws Exception {
-		prop=new Properties();
-		f=new FileInputStream(Constant.CONFIGFILE);
+		prop = new Properties();
+		f = new FileInputStream(Constant.CONFIGFILE);
 		prop.load(f);
 		if (browser.equalsIgnoreCase("chrome")) {
 			driver = new ChromeDriver();

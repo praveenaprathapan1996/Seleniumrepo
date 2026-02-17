@@ -30,36 +30,40 @@ public class ManageNewsPage {
 	@FindBy(xpath = "//h3[text()='Enter News Informations']")
 	WebElement enterNewsInformation;
 
-	public void clickOnNewButton() {
+	public ManageNewsPage clickOnNewButton() {
 		newButton.click();
-
+		return this;
 	}
 
-	public void enterNewNews() {
+	public ManageNewsPage enterNewNews() {
 		newsTextField.sendKeys("Today is Holiday");
-
+		return this;
 	}
 
-	public void clickOnSaveButton() {
+	public ManageNewsPage clickOnSaveButton() {
 
 		saveButton.click();
+		return this;
 	}
 
-	public void clickOnSearchButton() {
+	public ManageNewsPage clickOnSearchButton() {
 		searchButton.click();
+		return this;
 	}
 
-	public void enterNewsOnSearchManageNews() {
+	public ManageNewsPage enterNewsOnSearchManageNews() {
 		searchField.sendKeys("Rainy Day");
+		return this;
 	}
 
-	public void clickOnSearchOption() {
+	public ManageNewsPage clickOnSearchOption() {
 		searchOption.click();
+		return this;
 	}
 
-	public void clickOnResetButton() {
+	public ManageNewsPage clickOnResetButton() {
 		resetButton.click();
-
+		return this;
 	}
 
 	public boolean enterNewsInformationDisplay() {
