@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-skipped">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,21 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,  1 skipped,  3 passed</span>
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title skipped">Retried methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
                     </span>
-                    <div class="method-list-content skipped suite-Suite">
+                    <div class="method-list-content failed suite-Suite">
                       <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testScript.ManageNewsTest" class="method navigator-link" hash-for-method="verifyUserIsAbleToAddNewNews">verifyUserIsAbleToAddNewNews</a> <!-- method navigator-link -->
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testScript.ManageNewsTest" class="method navigator-link" hash-for-method="verifyUserIsAbleToSearchNews">verifyUserIsAbleToSearchNews</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content skipped suite-Suite -->
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -125,11 +125,6 @@
                         <a href="#" panel-name="suite-Suite" title="testScript.ManageNewsTest" class="method navigator-link" hash-for-method="verifyUserIsAbleToResetNews">verifyUserIsAbleToResetNews</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testScript.ManageNewsTest" class="method navigator-link" hash-for-method="verifyUserIsAbleToSearchNews">verifyUserIsAbleToSearchNews</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
@@ -142,27 +137,27 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-skipped">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
+              <img src="failed.png"/>
               <span class="class-name">testScript.ManageNewsTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyUserIsAbleToAddNewNews">
-                  </a> <!-- verifyUserIsAbleToAddNewNews -->
-                  <span class="method-name">verifyUserIsAbleToAddNewNews</span>
+                  <a name="verifyUserIsAbleToSearchNews">
+                  </a> <!-- verifyUserIsAbleToSearchNews -->
+                  <span class="method-name">verifyUserIsAbleToSearchNews</span>
                   <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
   (Session info: chrome=144.0.7559.133)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
 Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5041cb2ef89321b57e62e00988daa73b, isElementDisplayed {id=f.AB8CBFA9B2B6765346318394BA73E849.d.2A3782B4D33D17047E412B722C450496.e.58}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\prave\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57285}, goog:processID: 14704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57285/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (5041cb2ef89321b57e62e00988daa73b)] -&gt; xpath: //h3[text()=&apos;Enter News Informations&apos;]]
-Session ID: 5041cb2ef89321b57e62e00988daa73b
+Command: [5f23c49f79ec1a17edb464187d878c6a, isElementEnabled {id=f.6060B77FA185D243CBF49D16CF67DE2A.d.21AAF6D6AD9DCEC4B69BA7DFA3CB3E53.e.44}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\prave\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55017}, goog:processID: 16504, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55017/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (5f23c49f79ec1a17edb464187d878c6a)] -&gt; name: Search]
+Session ID: 5f23c49f79ec1a17edb464187d878c6a
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -171,20 +166,20 @@ Session ID: 5041cb2ef89321b57e62e00988daa73b
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:282)
+	at org.openqa.selenium.remote.RemoteWebElement.isEnabled(RemoteWebElement.java:181)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
-	at pages.ManageNewsPage.enterNewsInformationDisplay(ManageNewsPage.java:74)
-	at testScript.ManageNewsTest.verifyUserIsAbleToAddNewNews(ManageNewsTest.java:27)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.isEnabled(Unknown Source)
+	at pages.ManageNewsPage.searchButtonIsEnabled(ManageNewsPage.java:74)
+	at testScript.ManageNewsTest.verifyUserIsAbleToSearchNews(ManageNewsTest.java:42)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 ... Removed 30 stack frames
 </div> <!-- stack-trace -->
                   <em>
-(Validating that user can add new news )                  </em>
+(Validating user can able to Search  News)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-skipped -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -207,15 +202,6 @@ Session ID: 5041cb2ef89321b57e62e00988daa73b
                   <span class="method-name">verifyUserIsAbleToResetNews</span>
                   <em>
 (Validating that user can Reset  Manage news page)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyUserIsAbleToSearchNews">
-                  </a> <!-- verifyUserIsAbleToSearchNews -->
-                  <span class="method-name">verifyUserIsAbleToSearchNews</span>
-                  <em>
-(Validating user can able to Search  News)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -276,28 +262,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyUserIsAbleToSearchNews')
+data.setCell(0, 1, 'verifyUserIsAbleToAddNewNews')
 data.setCell(0, 2, 'testScript.ManageNewsTest')
-data.setCell(0, 3, 3093);
+data.setCell(0, 3, 2658);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyUserIsAbleToAddNewNews')
+data.setCell(1, 1, 'verifyUserIsAbleToSearchNews')
 data.setCell(1, 2, 'testScript.ManageNewsTest')
-data.setCell(1, 3, 2769);
+data.setCell(1, 3, 1818);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyUserIsAbleToAddNewNews')
+data.setCell(2, 1, 'verifyUserIsAbleToResetNews')
 data.setCell(2, 2, 'testScript.ManageNewsTest')
-data.setCell(2, 3, 1636);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'verifyUserIsAbleToResetNews')
-data.setCell(3, 2, 'testScript.ManageNewsTest')
-data.setCell(3, 3, 1139);
+data.setCell(2, 3, 1257);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 8 seconds</span>
+              <span class="suite-total-time">Total running time: 5 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -330,47 +312,37 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUserIsAbleToAddNewNews</span>
-                <span class="method-start">2765 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">driverQuit([TestResult name=verifyUserIsAbleToAddNewNews status=SKIP method=ManageNewsTest.verifyUserIsAbleToAd...)</span>
-                <span class="method-start">5555 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">intializeBrowser(chrome)</span>
-                <span class="method-start">5559 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">verifyUserIsAbleToAddNewNews</span>
-                <span class="method-start">7917 ms</span>
+                <span class="method-start">2844 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">driverQuit([TestResult name=verifyUserIsAbleToAddNewNews status=SUCCESS method=ManageNewsTest.verifyUserIsAbleT...)</span>
-                <span class="method-start">9554 ms</span>
+                <span class="method-start">5506 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">intializeBrowser(chrome)</span>
-                <span class="method-start">9556 ms</span>
+                <span class="method-start">5506 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUserIsAbleToResetNews</span>
-                <span class="method-start">11770 ms</span>
+                <span class="method-start">7775 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">driverQuit([TestResult name=verifyUserIsAbleToResetNews status=SUCCESS method=ManageNewsTest.verifyUserIsAbleTo...)</span>
-                <span class="method-start">12911 ms</span>
+                <span class="method-start">9034 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">intializeBrowser(chrome)</span>
-                <span class="method-start">12915 ms</span>
+                <span class="method-start">9035 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">verifyUserIsAbleToSearchNews</span>
-                <span class="method-start">16736 ms</span>
+                <span class="method-start">11440 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">driverQuit([TestResult name=verifyUserIsAbleToSearchNews status=SUCCESS method=ManageNewsTest.verifyUserIsAbleT...)</span>
-                <span class="method-start">19829 ms</span>
+                <span class="method-name">driverQuit([TestResult name=verifyUserIsAbleToSearchNews status=FAILURE method=ManageNewsTest.verifyUserIsAbleT...)</span>
+                <span class="method-start">13282 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -9,7 +9,7 @@
     <classes>
       <class name="testScript.ManageNewsTest">
         <methods>
-          <include name="verifyUserIsAbleToAddNewNews"/>
+          <include name="verifyUserIsAbleToSearchNews"/>
           <include name="driverQuit"/>
           <include name="intializeBrowser"/>
         </methods>
