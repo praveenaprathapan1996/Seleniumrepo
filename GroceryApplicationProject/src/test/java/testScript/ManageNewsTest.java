@@ -30,7 +30,7 @@ public class ManageNewsTest extends Base {
 
 	}
 
-	@Test(description = "Validating user can able to Search  News")
+	@Test(description = "Validating user can able to Search  News",retryAnalyzer = retry.RetryMechanism.class)
 	public void verifyUserIsAbleToSearchNews() throws IOException {
 		String username = ExcelUtility.getStringData(0, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(0, 1, "LoginPage");
