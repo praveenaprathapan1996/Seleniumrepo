@@ -85,9 +85,9 @@ public class AdminUsersPage {
 		return this;
 	}
 
-	public AdminUsersPage enterUsernameFieldForSearchUser() {
+	public AdminUsersPage enterUsernameFieldForSearchUser(String usernamesearchUser) {
 
-		usernameField_Search.sendKeys("Praveena");
+		usernameField_Search.sendKeys(usernamesearchUser);
 		return this;
 	}
 

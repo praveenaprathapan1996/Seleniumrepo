@@ -41,12 +41,13 @@ public class AdminUsersTest extends Base {
 	public void verifyUserIsAbleToSearchUsers() throws IOException {
 		String username = ExcelUtility.getStringData(0, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(0, 1, "LoginPage");
+		String usernamesearchUser = ExcelUtility.getStringData(0, 0, "AdminUser");
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.enterUsernameOnUserNameField(username).enterPasswordOnPasswordField(password);
 		homepage = loginpage.clickOnsignInButton();
 		adminUserPage = homepage.clickOnMoreInfoAdminUser();
-		adminUserPage.clickOnSearchButtonFromAdminUser().enterUsernameFieldForSearchUser().selectUserTypeForSearchUser()
-				.clickOnSearchOption();
+		adminUserPage.clickOnSearchButtonFromAdminUser().enterUsernameFieldForSearchUser(usernamesearchUser)
+				.selectUserTypeForSearchUser().clickOnSearchOption();
 		boolean serachselection = adminUserPage.searchOptionIsEnabled();
 		Assert.assertTrue(serachselection, Constant.SEARCHUSERERROR);
 

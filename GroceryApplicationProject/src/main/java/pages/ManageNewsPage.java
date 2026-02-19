@@ -35,8 +35,8 @@ public class ManageNewsPage {
 		return this;
 	}
 
-	public ManageNewsPage enterNewNews() {
-		newsTextField.sendKeys("Today is Holiday");
+	public ManageNewsPage enterNewNews(String newNews) {
+		newsTextField.sendKeys(newNews);
 		return this;
 	}
 
@@ -51,8 +51,8 @@ public class ManageNewsPage {
 		return this;
 	}
 
-	public ManageNewsPage enterNewsOnSearchManageNews() {
-		searchField.sendKeys("Rainy Day");
+	public ManageNewsPage enterNewsOnSearchManageNews(String searchNews) {
+		searchField.sendKeys(searchNews);
 		return this;
 	}
 

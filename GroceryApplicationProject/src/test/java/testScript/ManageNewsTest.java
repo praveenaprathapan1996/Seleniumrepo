@@ -20,25 +20,27 @@ public class ManageNewsTest extends Base {
 	public void verifyUserIsAbleToAddNewNews() throws IOException {
 		String username = ExcelUtility.getStringData(0, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(0, 1, "LoginPage");
+		String newNews = ExcelUtility.getStringData(0, 0, "ManageNews");
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.enterUsernameOnUserNameField(username).enterPasswordOnPasswordField(password);
 		homepage = loginpage.clickOnsignInButton();
 		manageNews = homepage.clickOnMoreInfoManageNews();
-		manageNews.clickOnNewButton().enterNewNews().clickOnSaveButton();
+		manageNews.clickOnNewButton().enterNewNews(newNews).clickOnSaveButton();
 		boolean enterNewsInfor = manageNews.enterNewsInformationDisplay();
 		Assert.assertTrue(enterNewsInfor, Constant.ADDNEWNEWSERROR);
 
 	}
 
-	@Test(description = "Validating user can able to Search  News",retryAnalyzer = retry.RetryMechanism.class)
+	@Test(description = "Validating user can able to Search  News", retryAnalyzer = retry.RetryMechanism.class)
 	public void verifyUserIsAbleToSearchNews() throws IOException {
 		String username = ExcelUtility.getStringData(0, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(0, 1, "LoginPage");
+		String searchNews = ExcelUtility.getStringData(1, 0, "ManageNews");
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.enterUsernameOnUserNameField(username).enterPasswordOnPasswordField(password);
 		homepage = loginpage.clickOnsignInButton();
 		manageNews = homepage.clickOnMoreInfoManageNews();
-		manageNews.clickOnSearchButton().enterNewsOnSearchManageNews().clickOnSearchOption();
+		manageNews.clickOnSearchButton().enterNewsOnSearchManageNews(searchNews).clickOnSearchOption();
 		boolean searchEnable = manageNews.searchButtonIsEnabled();
 		Assert.assertTrue(searchEnable, Constant.SEARCHNEWSERROR);
 
